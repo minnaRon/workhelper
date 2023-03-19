@@ -1,3 +1,9 @@
+/**
+ * File to test mongoDB connection
+ * @description Connects to the mongoDB database and saves a user.
+ * Is used to test the connection to the database.
+ * use terminal command: $node mongo.js <passwordOfTheDatabaseConnection>
+*/
 const mongoose = require('mongoose')
 
 if (process.argv.length < 3) {

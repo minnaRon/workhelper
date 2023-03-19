@@ -1,4 +1,8 @@
-const http = require('./app')
+/**
+ * Module, index
+ * @description Starts the server
+*/
+const http = require('http')
 const app = require('./app')
 const config = require('./utils/config')
 const logger = require('./utils/logger')

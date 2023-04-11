@@ -7,7 +7,7 @@ const usersRouter = require('express').Router()
 const User = require('../models/user')
 
 /**
- * usersRouter, listens path '/'
+ * usersRouter, listens path '/api/users'
  * @description Adds a valid new user to the database.
  * request @param {string} username - user's input for username
  * request @param {string} name - user's input for name
@@ -26,7 +26,7 @@ const User = require('../models/user')
  * * @returns saved user with status 201
  */
 usersRouter.post('/', async (req, res) => {
-  const { username, name, password } = req.body
+  const { username, name, password, languageId } = req.body
   const existingUser = await User.findOne({ username })
   if (existingUser) {
     return res.status(400).json({ error:'username must be unique' })
@@ -42,11 +42,24 @@ usersRouter.post('/', async (req, res) => {
     username,
     name,
     passwordHash,
+    language: languageId,
     joiningday: new Date(),
     lastVisited: new Date()
   })
+  //console.log('--users--newuser--', user)
+
   const savedUser = await user.save()
+  //console.log('--users--savedUser--', savedUser)
   res.status(201).json(savedUser)
+})
+
+/**
+ * usersRouter.delete, listens path '/api/users'
+ * dev only - clears all users from the database
+ */
+usersRouter.delete('/', async (req, res) => {
+  await User.deleteMany({})
+  res.status(204).end()
 })
 
 module.exports = usersRouter

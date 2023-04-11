@@ -21,6 +21,10 @@ const userSchema = mongoose.Schema({
     maxlength: [50, 'name should contain 3-50 chars'],
     required: [true, 'name is missing'],
   },
+  language: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Language'
+  },
   passwordHash: String,
   joiningday: Date,
   lastVisited: Date

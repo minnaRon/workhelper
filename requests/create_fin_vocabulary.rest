@@ -1,0 +1,67 @@
+POST http://localhost:8080/api/vocabularies
+Content-Type: application/json
+
+    {
+      "language":"64285ce2b1863882baf0ac75",
+      "languageCode":"fin",
+      "vocabulary": {
+        "checked":{
+          "notificationMessages": {
+            "langRedErroraddNewLanguage":"uuden kielen lisääminen epäonnistui: ",
+            "userRedIloginUserstart": "Tervetuloa",
+            "userRedIloginUserend": "työn iloa!",
+            "userRedEloginUserstart": "Kirjautumistiedoissa oli virhe: ",
+            "userRedEloginUserend": ", yritä uudelleen",
+            "userRedIlogoutstart": "Heipä hei",
+            "userRedIlogoutend": "nähdään taas!",
+            "usersRedEaddNewUser": "Uuden käyttäjän luominen epäonnistui: "
+          },
+          "welcome": {
+            "WH2headlineT":"TERVETULOA!",
+            "WBloginT": "KIRJAUDU",
+            "WLnewUserT": "UUSI KÄYTTÄJÄ"
+          },
+          "loginform": {
+            "LFH2headlineT": "KIRJAUTUMINEN",
+            "LFIusernameT": "käyttäjänimi",
+            "LFIpasswordT": "salasana",
+            "LFBsubmitT": "KIRJAUDU",
+            "LFBbackT": "TAKAISIN"
+          },
+          "logininfo": {
+            "LIBlogoutT": "KIRJAUDU ULOS"
+          },
+          "newuserform": {
+            "NUFH2headlineT": "UUSI KÄYTTÄJÄ",
+            "NUFIusernameT": "käyttäjänimi",
+            "NUFInameT": "nimi",
+            "NUFIpasswordT": "salasana",
+            "NUFIconfirmPasswordT": "salasana uudelleen",
+            "NUFBsubmitT": "TALLENNA JA KIRJAUDU",
+            "NUFBbackT": "TAKAISIN"
+          }
+        },
+        "newPlaces": {       
+          "loginform": {
+            "LFIforDevT": {
+              "eng": "DEV HELPER INPUT",
+              "usersWhoTranslate": ["642861b1b1863882baf0ac83"],
+              "translations": {
+                "EKA KÄÄNNÖS INPUT": 1
+              }
+            },
+            "LFBforDevT": {
+              "eng": "DEV HELPER BUTTON",
+              "usersWhoTranslate": ["642861b1b1863882baf0ac83", "642862c7b1863882baf0ac86"],
+              "translations": {
+                "EKA KÄÄNNÖS BUTTON": 1,
+                "TOKA KÄÄNNÖS BUTTON": 1
+              }
+            }
+          }
+        }
+      }
+    }
+
+ //"lastUpdate": "2023-04-01T17:05:51.916Z",
+ // "id": "6428646fb1863882baf0ac88"

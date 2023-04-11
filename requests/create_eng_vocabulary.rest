@@ -1,0 +1,50 @@
+POST http://localhost:8080/api/vocabularies
+Content-Type: application/json
+
+    {
+      "language":"64285d05b1863882baf0ac77",
+      "languageCode":"eng",
+      "vocabulary": {
+        "checked":{
+          "notificationMessages": {
+            "langRedErroraddNewLanguage":"failed to add a new language: ",
+            "userRedIloginUserstart": "Welcome",
+            "userRedIloginUserend": "have a good one!",
+            "userRedEloginUserstart": "Failed to log in: ",
+            "userRedEloginUserend": ", try again",
+            "userRedIlogoutstart": "Bye bye",
+            "userRedIlogoutend": "see you soon!",
+            "usersRedEaddNewUser": "Failed to create a new user: "          
+          },
+          "welcome": {
+            "WH2headlineT":"WELCOME!",
+            "WBloginT": "LOG IN",
+            "WLnewUserT": "NEW USER"
+          },
+          "loginform": {
+            "LFH2headlineT": "LOG IN",
+            "LFIusernameT": "username",
+            "LFIpasswordT": "password",
+            "LFBsubmitT": "LOGIN",
+            "LFBbackT": "BACK",
+            "LFIforDevT": "DEV HELPER INPUT",
+            "LFBforDevT": "DEV HELPER BUTTON"
+          },
+          "logininfo": {
+            "LIBlogoutT": "LOG OUT"
+          },
+          "newuserform": {
+            "NUFH2headlineT": "NEW USER",
+            "NUFIusernameT": "username",
+            "NUFInameT": "name",
+            "NUFIpasswordT": "password",
+            "NUFIconfirmPasswordT": "confirm password",
+            "NUFBsubmitT": "SAVE AND LOGIN",
+            "NUFBbackT": "BACK"
+          }
+        }
+      }
+    }
+
+//"lastUpdate": "2023-04-01T16:38:07.487Z",
+//"id": "64285defb1863882baf0ac7a"

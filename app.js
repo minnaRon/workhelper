@@ -15,6 +15,9 @@ const logger = require('./utils/logger')
 const mongoose = require('mongoose')
 const loginRouter = require('./controllers/login')
 const usersRouter = require('./controllers/users')
+const countriesRouter = require('./controllers/countries')
+const vocabulariesRouter = require('./controllers/vocabularies')
+const languagesRouter = require('./controllers/languages')
 
 logger.info('connecting to MongoDB')
 
@@ -37,6 +40,9 @@ if(process.env.NODE_ENV !== 'test') {
 
 app.use('/api/login', loginRouter)
 app.use('/api/users', usersRouter)
+app.use('/api/countries', countriesRouter)
+app.use('/api/vocabularies', vocabulariesRouter)
+app.use('/api/languages', languagesRouter)
 
 if(process.env.NODE_ENV === 'test') {
   const testingRouter = require('./controllers/testing')

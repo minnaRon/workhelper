@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/languages
+Content-Type: application/json
+
+{
+  "code": "fin",
+  "nameInEnglish": "Finnish",
+  "nameLocal": "suomi",
+  "defaultFlagCountrycode": "FI"
+}
+
+//id: 64285ce2b1863882baf0ac75

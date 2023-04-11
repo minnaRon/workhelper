@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/languages
+Content-Type: application/json
+
+{
+  "code": "eng",
+  "nameInEnglish": "English",
+  "nameLocal": "English",
+  "defaultFlagCountrycode": "GB"
+}
+
+//id: 64285d05b1863882baf0ac77

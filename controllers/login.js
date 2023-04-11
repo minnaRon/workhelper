@@ -8,7 +8,7 @@ const loginRouter = require('express').Router()
 const User = require('../models/user')
 
 /**
- * loginRouter, listens path '/'
+ * loginRouter, listens path '/api/login'
  * @description Checks user's credentials and authenticates
  * request @param {string} username - user's input for username
  * request @param {string} password - user's input for password
@@ -34,7 +34,7 @@ loginRouter.post('/', async (req, res) => {
     })
   }
 
-  user.lastVisited = new Date
+  user.lastVisited = new Date()
   await User.findByIdAndUpdate(
     user._id, user,
     { new: true, runValidators: true, context: 'query' }

@@ -1,0 +1,14 @@
+POST http://localhost:8080/api/countries
+Content-Type: application/json
+
+{
+  "alpha2Code": "FI",
+  "nameEng": "Finland",
+  "nameNative": "Suomi",
+  "languages": ["fin", "swe"],
+  "currency": "EUR",
+  "utc_offset": ["+03:00"],
+  "latlng":[64.0, 26.0]
+}
+
+//"id": "6428814fbce67a22def3eec9"

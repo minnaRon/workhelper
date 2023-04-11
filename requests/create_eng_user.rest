@@ -1,0 +1,13 @@
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "username": "englishUser",
+  "name": "englishName",
+  "password": "englishPassword",
+  "language": "64285d05b1863882baf0ac77"
+}
+
+//"joiningday": "2023-04-01T16:54:09.030Z",
+//  "lastVisited": "2023-04-01T16:54:09.030Z",
+//  "id": "642861b1b1863882baf0ac83"

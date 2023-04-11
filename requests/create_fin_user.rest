@@ -1,0 +1,13 @@
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "username": "minna",
+  "name": "minnaNimi",
+  "password": "salainen",
+  "language": "64285ce2b1863882baf0ac75"
+}
+
+//"joiningday": "2023-04-01T16:58:47.209Z",
+//  "lastVisited": "2023-04-01T16:58:47.209Z",
+//  "id": "642862c7b1863882baf0ac86"

@@ -18,6 +18,7 @@ const usersRouter = require('./controllers/users')
 const countriesRouter = require('./controllers/countries')
 const vocabulariesRouter = require('./controllers/vocabularies')
 const languagesRouter = require('./controllers/languages')
+const worksRouter = require('./controllers/works')
 
 logger.info('connecting to MongoDB')
 
@@ -43,6 +44,7 @@ app.use('/api/users', usersRouter)
 app.use('/api/countries', countriesRouter)
 app.use('/api/vocabularies', vocabulariesRouter)
 app.use('/api/languages', languagesRouter)
+app.use('/api/works', middleware.userExtractor, worksRouter)
 
 if(process.env.NODE_ENV === 'test') {
   const testingRouter = require('./controllers/testing')

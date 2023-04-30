@@ -2,7 +2,7 @@ POST http://localhost:8080/api/vocabularies
 Content-Type: application/json
 
     {
-      "language":"64285ce2b1863882baf0ac75",
+      "language":"643ca035652298daf20bba34",
       "languageCode":"fin",
       "vocabulary": {
         "checked":{
@@ -39,6 +39,17 @@ Content-Type: application/json
             "NUFIconfirmPasswordT": "salasana uudelleen",
             "NUFBsubmitT": "TALLENNA JA KIRJAUDU",
             "NUFBbackT": "TAKAISIN"
+          },
+          "workselector": {
+            "WSH1headlineT": "Työn iloihin!",
+            "WSSworkT": "TYÖN KOHDE: ",
+            "WSInewWorkT": "...TAI LISÄÄ UUSI: ",
+            "WSInewWorkP": "LISÄÄ UUSI TYÖ",
+            "WSCisProjectT": "ON PROJEKTI",
+            "WSRworkTypeT": "TYÖTAPA: ",
+            "WSInewWorkTypeT": "...TAI LISÄÄ UUSI: ",
+            "WSInewWorkTypeP": "LISÄÄ UUSI TYÖTAPA",
+            "WSBsubmitT": "ALOITA TYÖT"
           }
         },
         "newPlaces": {       
@@ -63,5 +74,6 @@ Content-Type: application/json
       }
     }
 
- //"lastUpdate": "2023-04-01T17:05:51.916Z",
- // "id": "6428646fb1863882baf0ac88"
+ //    "lastUpdate": "2023-04-24T15:17:57.832Z",
+ //    "id": "64469da597ab7da8f1b22161"
+ 

@@ -26,6 +26,17 @@ const userSchema = mongoose.Schema({
     ref: 'Language'
   },
   passwordHash: String,
+  works: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Work'
+    }
+  ],
+  workTypes: [
+    {
+      type: String
+    }
+  ],
   joiningday: Date,
   lastVisited: Date
 })

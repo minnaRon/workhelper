@@ -2,7 +2,7 @@ POST http://localhost:8080/api/vocabularies
 Content-Type: application/json
 
     {
-      "language":"64285d05b1863882baf0ac77",
+      "language":"643ca0a2652298daf20bba3a",
       "languageCode":"eng",
       "vocabulary": {
         "checked":{
@@ -41,10 +41,21 @@ Content-Type: application/json
             "NUFIconfirmPasswordT": "confirm password",
             "NUFBsubmitT": "SAVE AND LOGIN",
             "NUFBbackT": "BACK"
+          },
+          "workselector": {
+            "WSH1headlineT": "Hello Work!",
+            "WSSworkT": "object of work: ",
+            "WSInewWorkT": "...or add a new one: ",
+            "WSInewWorkP": "add a new work item",
+            "WSCisProjectT": "is a project",
+            "WSRworkTypeT": "way of working: ",
+            "WSInewWorkTypeT": "...or add a new one: ",
+            "WSInewWorkTypeP": "add a new way of working",
+            "WSBsubmitT": "start working"
           }
         }
       }
     }
 
-//"lastUpdate": "2023-04-01T16:38:07.487Z",
-//"id": "64285defb1863882baf0ac7a"
+// "lastUpdate": "2023-04-24T15:18:50.201Z",
+// "id": "64469dda97ab7da8f1b22164"

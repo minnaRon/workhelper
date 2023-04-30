@@ -4,6 +4,8 @@
  * Exports as object functions unknownEndpoint, errorHandler
 */
 const logger = require('./logger')
+const jwt = require('jsonwebtoken')
+const User = require('../models/user')
 
 /**
  * Function unknownEndpoint
@@ -24,7 +26,9 @@ const unknownEndpoint = (req, res) => {
 const errorHandler = (error, req, res, next) => {
   logger.error(error.message)
 
-  if (error.name === 'ValidationError') {
+  if (error.name === 'CastError') {
+    return res.status(400).json({ error: 'malformatted id' })
+  } else if (error.name === 'ValidationError') {
     return res.status(400).json({ error: error.message })
   } else if (error.name === 'JsonWebTokenError') {
     return res.status(401).json({ error: 'invalid token' })
@@ -34,4 +38,16 @@ const errorHandler = (error, req, res, next) => {
 
   next(error)
 }
-module.exports = { unknownEndpoint, errorHandler }
+
+const userExtractor = async (req, res, next) => {
+  const authorization = req.get('Authorization')
+  if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
+    const decodedToken = jwt.verify(authorization.substring(7), process.env.SECRET)
+    if (decodedToken) {
+      req.user = await User.findById(decodedToken.id)
+    }
+  }
+  next()
+}
+
+module.exports = { unknownEndpoint, errorHandler, userExtractor }

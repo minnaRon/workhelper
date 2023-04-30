@@ -2,6 +2,9 @@ POST http://localhost:8080/api/login
 Content-Type: application/json
 
 {
-  "username": "requestUser",
-  "password": "requestPassword"
+  "username": "minna",
+  "password": "salainen"
 }
+
+//  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbm5hIiwibmFtZSI6Im1pbm5hTmltaSIsImlkIjoiNjQzYzlmODQ2NTIyOThkYWYyMGJiYTJjIiwiaWF0IjoxNjgxNjk1MDA4LCJleHAiOjE2ODIyOTk4MDh9.CNKUUn1mzCAqGmXArwjpXhA7T2zybvd1k9qfdoBIxRw",
+//  "id": "643c9f84652298daf20bba2c"

@@ -43,6 +43,7 @@ usersRouter.post('/', async (req, res) => {
     name,
     passwordHash,
     language: languageId,
+    workTypes: ['working at home', 'studying'],
     joiningday: new Date(),
     lastVisited: new Date()
   })
@@ -51,6 +52,40 @@ usersRouter.post('/', async (req, res) => {
   const savedUser = await user.save()
   //console.log('--users--savedUser--', savedUser)
   res.status(201).json(savedUser)
+})
+
+usersRouter.get('/', async (req, res) => {
+  //TEE token vain userin omat
+  // const works = await Work.find({ user: user._id.toString() }) //.populate('user', {username:1, name:1})
+  const users = await User.find({}) //.populate('user', {username:1, name:1})
+  console.log('--back--works--users fromdb--', users)
+  res.json(users)
+})
+
+
+usersRouter.get('/:id', async (req, res) => {
+  console.log('--users--get--:id--req.params.id--',req.params.id)
+  // const userId = req.params.id
+  const user = await User.findById(req.params.id)
+  console.log('--users--get--user--',user)
+  res.status(200).json(user)
+})
+
+usersRouter.put('/:id', async (req, res) => {
+  //const { username, name, passwordHash, joiningday, lastVisited } = req.body
+  //TEE lisää tarkastus vanha hash oikea username
+  //TEE voi muuttaa vain name, passwordHash, lastVisited
+  // const updatedUser = { username, name, passwordHash, joiningday, lastVisited }
+  const updatedUser = req.body
+  console.log('--users--put--updatedUser--',updatedUser);
+  const savedUser = await User.findByIdAndUpdate(
+    req.params.id,
+    updatedUser,
+    { new: true, runValidators: true, context: 'query' }
+  )
+  console.log('--users--put--savedUser--',savedUser);
+
+  res.json(savedUser)
 })
 
 /**

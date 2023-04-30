@@ -1,0 +1,6 @@
+GET http://localhost:8080/api/users/64375a0824050c23d4e52970
+
+//fin
+// "id": "64375a0824050c23d4e52970"
+//eng
+// "id": "64375a3f24050c23d4e52973"

@@ -47,10 +47,8 @@ usersRouter.post('/', async (req, res) => {
     joiningday: new Date(),
     lastVisited: new Date()
   })
-  //console.log('--users--newuser--', user)
-
   const savedUser = await user.save()
-  //console.log('--users--savedUser--', savedUser)
+
   res.status(201).json(savedUser)
 })
 
@@ -77,13 +75,13 @@ usersRouter.put('/:id', async (req, res) => {
   //TEE voi muuttaa vain name, passwordHash, lastVisited
   // const updatedUser = { username, name, passwordHash, joiningday, lastVisited }
   const updatedUser = req.body
-  console.log('--users--put--updatedUser--',updatedUser);
+  console.log('--users--put--updatedUser--',updatedUser)
   const savedUser = await User.findByIdAndUpdate(
     req.params.id,
     updatedUser,
     { new: true, runValidators: true, context: 'query' }
   )
-  console.log('--users--put--savedUser--',savedUser);
+  console.log('--users--put--savedUser--',savedUser)
 
   res.json(savedUser)
 })

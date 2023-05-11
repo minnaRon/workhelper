@@ -6,17 +6,14 @@
 const vocabulariesRouter = require('express').Router()
 const Vocabulary = require('../models/vocabulary')
 
-
 /**
  * vocabulariesRouter.get, listens path '/api/vocabularies/:id'
  * @returns vocabulary with requested language.id
  */
 vocabulariesRouter.get('/:languageId', async (req, res) => {
   const languageId = req.params.languageId
-  console.log('--vocabularies--get--:req.params.languageId--', languageId)
   const vocabulary = await Vocabulary.find({ language: languageId })
-  console.log('--vocabularies--get--vocabulary--',vocabulary[0])
-  // res.status(200).json(vocabulary.toJSON())
+
   res.status(200).json(vocabulary[0])
 })
 
@@ -27,7 +24,6 @@ vocabulariesRouter.get('/:languageId', async (req, res) => {
  */
 vocabulariesRouter.post('/', async (req, res) => {
   const body = req.body
-  console.log('--vocabularies--post--req.body--',req.body)
   const languageCode = body.languageCode
   const existingVocabulary = await Vocabulary.findOne({ languageCode })
 
@@ -41,9 +37,8 @@ vocabulariesRouter.post('/', async (req, res) => {
     vocabulary: body.vocabulary,
     lastUpdate: new Date()
   })
-  console.log('--vocabularies--newVocabulary--',newVocabulary)
   const savedVocabulary = await newVocabulary.save()
-  console.log('--vocabularies--savedVocabulary--',savedVocabulary)
+
   res.status(201).json(savedVocabulary.toJSON())
 })
 
@@ -56,6 +51,7 @@ vocabulariesRouter.put('/:id', async (req, res) => {
   const vocabulary = req.body
   vocabulary.lastUpdate = new Date()
   const updatedVocabulary = await Vocabulary.findByIdAndUpdate(req.params.id, vocabulary, { new:true, runValidators: true, context:'query' })
+
   res.status(200).json(updatedVocabulary.toJSON())
 })
 

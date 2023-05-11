@@ -11,9 +11,7 @@ const Language = require('../models/language')
  * @returns all languages
  */
 languagesRouter.get('/', async (req, res) => {
-  //console.log('--languages--get all--')
   const languages = await Language.find({})
-  //console.log('--languages--get--languages--',languages)
   res.status(200).json(languages)
 })
 
@@ -23,9 +21,7 @@ languagesRouter.get('/', async (req, res) => {
  * (check if still needed in the app?)
  */
 languagesRouter.get('/:id', async (req, res) => {
-  //console.log('--languages--get--:id--req.params.id--',req.params.id)
   const language = await Language.find({ id: req.params.id })
-  //console.log('--languages--get--language--',language)
   res.status(200).json(language.toJSON())
 })
 
@@ -37,7 +33,6 @@ languagesRouter.get('/:id', async (req, res) => {
 languagesRouter.post('/', async (req, res) => {
   const body = req.body
   const code = req.body.code
-  //console.log('--languages--post--req.body--',req.body)
   const existingLanguage = await Language.findOne({ code })
   if (existingLanguage) {
     return res.status(400).json({ error:`language with code '${code}' already exists` })
@@ -45,9 +40,7 @@ languagesRouter.post('/', async (req, res) => {
   const newLanguage = new Language({
     ...body
   })
-  //console.log('--languages--newLanguage--',newLanguage)
   const savedLanguage = await newLanguage.save()
-  //console.log('--languages--savedLanguage--',savedLanguage)
   res.status(201).json(savedLanguage.toJSON())
 })
 

@@ -11,9 +11,7 @@ const Country = require('../models/country')
  * ..in progress.. use with the selected country of the NewUserForm to determine language for user
  */
 countriesRouter.get('/:id', async (req, res) => {
-  //console.log('--countries--get--:country--req.params.id--',req.params.id)
   const country = await Country.find({ id: req.params.id })
-  //console.log('--countries--get--country--',country)
   res.status(200).json(country.toJSON())
 })
 
@@ -23,13 +21,10 @@ countriesRouter.get('/:id', async (req, res) => {
  */
 countriesRouter.post('/', async (req, res) => {
   const body = req.body
-  //console.log('--countries--post--req.body--',req.body)
   const newCountry = new Country({
     ...body
   })
-  //console.log('--countries--newcountry--',newCountry)
   const savedCountry = await newCountry.save()
-  //console.log('--countries--savedCountry--',savedCountry)
   res.status(201).json(savedCountry.toJSON())
 })
 

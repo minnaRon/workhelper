@@ -13,6 +13,7 @@
 | 15.3. | 4    | front: yksikkötestejä redux toolkit reduserille ja redux thunkille, testien debugausta |
 | 16.3. | 3    | front: mock service worker ja renderWithProviders integraatiotesteille |
 | 17.3. | 3    | front: integraatiotestejä newUserForm, loginform, testien debugausta |
+
 | 27.3. | 8    | sovelluksen kielenvalinta -ominaisuus suunnittelua ja aloitusta |
 | 31.3. | 5    | koodia language, vocabulary ja country -controllerit, -modelit, dokumentointia koodiin |
 |  1.4. | 8    | koodia language, vocabulary ja country, dokumentointia, debugausta |
@@ -20,4 +21,16 @@
 |  5.4. | 4    | koodin debugausta, testejä |
 |  6.4. | 7    | front: testien päivittämistä ja debugausta |
 | 11.4. | 2    | back: integraatiotestit ja debugaus |
-| yht.  | 79   | |
+
+| 12.4. | 4    | sovelluksen työ -ominaisuus suunnittelua ja aloitusta |
+| 13.4. | 5    | front: workSelector |
+| 14.4. | 4    | front: reducer muutokset, komponentit Working ja WorkMainView |
+| 15.4. | 4    | back: work model ja controller, rest -kyselyjä |
+| 17.4. | 5    | token lisäys, muutokset koodiin tokenin käyttämiseksi, userExtractor |
+| 24.4. | 4    | front: workSelector sanasto, snapshot -testaus, koodin parantelua |
+| 25.4. | 1    | e2e -testejä, bugien korjausta |
+| 26.4. | 2    | e2e -testejä, bugien korjausta |
+| 27.4. | 3    | e2e -testejä, cypress -komentoja, bugien korjausta |
+| 28.4. | 5    | work bugien korjausta, integraatiotestejä back:iin |
+| 29.4. | 2    | dokumentointia koodiin, koodin siistimistä |
+| yht.  | 118  | |

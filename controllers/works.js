@@ -4,13 +4,14 @@
  * exports WorksRouter
 */
 const worksRouter = require('express').Router()
+const middleware = require('../utils/middleware')
 const Work = require('../models/work')
 
 /**
  * worksRouter.get, listens path '/api/works'
  * @returns all works of the user from the database
  */
-worksRouter.get('/', async (req, res) => {
+worksRouter.get('/', middleware.userExtractor, async (req, res) => {
   const works = await Work.find({ user: req.user._id })
   res.json(works)
 })

@@ -31,4 +31,8 @@
 | 28.4. | 5    | work bugien korjausta, integraatiotestejä back:iin |
 | 29.4. | 2    | dokumentointia koodiin, koodin siistimistä |
 | 30.4. | 2    | fly.io |
-| yht.  | 120  | |
+|  1.7. | 4    | front: material-ui komponentteja käyttöön: appbar, card, paper |
+|  2.7. | 3    | front: material-ui grid sijoittelua ja näkymien muuntelua: accordion  |
+|  3.7. | 5    | front: material-ui grid sijoittelua ja näkymien muuntelua: drawer, alert, avatar, menu |
+|  7.7. | 4    | front: testien korjailua, hienosäätöä, debugausta |
+| yht.  | 136  | |

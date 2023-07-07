@@ -17,7 +17,8 @@ Content-Type: application/json
             "usersRedEaddNewUser": "Failed to create a new user: "          
           },
           "welcome": {
-            "WH2headlineT":"WELCOME!",
+            "WH2headlineT":"WELCOME TO WORK!",
+            "WTdescribe": "You can:\n plan your work\n plan your breaks\n keep journal\n keep todo-list\n save notes",
             "WBloginT": "LOG IN",
             "WLnewUserT": "NEW USER"
           },
@@ -43,13 +44,13 @@ Content-Type: application/json
             "NUFBbackT": "BACK"
           },
           "workselector": {
-            "WSH1headlineT": "Hello Work!",
-            "WSSworkT": "object of work: ",
-            "WSInewWorkT": "...or add a new one: ",
+            "WSH1headlineT": "SELECT:",
+            "WSSworkT": "object of work:",
+            "WSInewWorkT": "...or add a new one:",
             "WSInewWorkP": "add a new work item",
             "WSCisProjectT": "is a project",
-            "WSRworkTypeT": "way of working: ",
-            "WSInewWorkTypeT": "...or add a new one: ",
+            "WSRworkTypeT": "way of working:",
+            "WSInewWorkTypeT": "...or add a new one:",
             "WSInewWorkTypeP": "add a new way of working",
             "WSBsubmitT": "start working"
           }
@@ -57,5 +58,5 @@ Content-Type: application/json
       }
     }
 
-// "lastUpdate": "2023-04-24T15:18:50.201Z",
-// "id": "64469dda97ab7da8f1b22164"
+//"lastUpdate": "2023-07-07T13:17:00.237Z",
+//  "id": "64a8104c8e031712c94c88ad"

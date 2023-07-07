@@ -17,7 +17,8 @@ Content-Type: application/json
             "usersRedEaddNewUser": "Uuden käyttäjän luominen epäonnistui: "
           },
           "welcome": {
-            "WH2headlineT":"TERVETULOA!",
+            "WH2headlineT":"TERVETULOA TÖIHIN!",
+            "WTdescribe": "Voit:\n suunnitella työpäiväsi\n suunnitella tauot\n pitää työpäiväkirjaa\n pitää tehtävien töiden listaa\n tallentaa muistiinpanoja",
             "WBloginT": "KIRJAUDU",
             "WLnewUserT": "UUSI KÄYTTÄJÄ"
           },
@@ -37,17 +38,17 @@ Content-Type: application/json
             "NUFInameT": "nimi",
             "NUFIpasswordT": "salasana",
             "NUFIconfirmPasswordT": "salasana uudelleen",
-            "NUFBsubmitT": "TALLENNA JA KIRJAUDU",
+            "NUFBsubmitT": "TALLENNA",
             "NUFBbackT": "TAKAISIN"
           },
           "workselector": {
-            "WSH1headlineT": "Työn iloihin!",
-            "WSSworkT": "TYÖN KOHDE: ",
-            "WSInewWorkT": "...TAI LISÄÄ UUSI: ",
+            "WSH1headlineT": "VALITSE: ",
+            "WSSworkT": "TYÖN KOHDE:",
+            "WSInewWorkT": "...TAI LISÄÄ UUSI:",
             "WSInewWorkP": "LISÄÄ UUSI TYÖ",
             "WSCisProjectT": "ON PROJEKTI",
-            "WSRworkTypeT": "TYÖTAPA: ",
-            "WSInewWorkTypeT": "...TAI LISÄÄ UUSI: ",
+            "WSRworkTypeT": "TYÖTAPA:",
+            "WSInewWorkTypeT": "...TAI LISÄÄ UUSI:",
             "WSInewWorkTypeP": "LISÄÄ UUSI TYÖTAPA",
             "WSBsubmitT": "ALOITA TYÖT"
           }
@@ -74,6 +75,5 @@ Content-Type: application/json
       }
     }
 
- //    "lastUpdate": "2023-04-24T15:17:57.832Z",
- //    "id": "64469da597ab7da8f1b22161"
- 
+ //"lastUpdate": "2023-07-07T13:15:47.230Z",
+ // "id": "64a810038e031712c94c88aa"
